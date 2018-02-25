@@ -8,27 +8,24 @@
 
 <body>
   <script>
-    /*
-      alert
-      confirm
-      prompt
-    */
-  //  alert('hello') // ポップアップアラートの表示
 
-  // okとキャンセルボタンのついたアラートの表示
-  // ok押すとtrue、キャンセルならfalseが帰ってくる
-  // var answer = confirm("are you sure?")
+    function hello() {
+      console.log("hello")
+    }
+    hello()
+    // consoleには'helloundefined'と表示される
+    // 引数違いの同名関数は宣言できない（あとに宣言したのが有効）
 
-  // if(confirm("are you sure?")){
-  //   // 処理
-  // }
+    // function hello(name) {
+    //   console.log('hello' + name)
+    // }
+    // hello('Tom')
 
-  // 入力フォーム付きのアラートを表示
-  // 入力が空ならnullが返る
-  // 第2引数にフォームのデフォルト値を指定できる
-  var name = prompt("your name?", "unknown")
-  console.log(name)
-  
+    const hello = (name, age) => {
+      console.log('hello' + name + ', ' + age)
+    }
+    hello('Tom', 16)
+
   </script>
 </body>
 
