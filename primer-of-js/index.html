@@ -9,22 +9,26 @@
 <body>
   <script>
     /*
-      真偽値
-        文字列： 空文字列以外だったらtrue
-        数値： 0かNaN以外だったらtrue
-        真偽値： true/false
-        object： null 以外だったらtrue
-        undefined、null： false
+      alert
+      confirm
+      prompt
     */
+  //  alert('hello') // ポップアップアラートの表示
 
-   if(x) {
-     // 処理
-   }
-   // xが文字列の場合以下と同等
-   if(x !== '') {
-     // 処理
-   }
-   
+  // okとキャンセルボタンのついたアラートの表示
+  // ok押すとtrue、キャンセルならfalseが帰ってくる
+  // var answer = confirm("are you sure?")
+
+  // if(confirm("are you sure?")){
+  //   // 処理
+  // }
+
+  // 入力フォーム付きのアラートを表示
+  // 入力が空ならnullが返る
+  // 第2引数にフォームのデフォルト値を指定できる
+  var name = prompt("your name?", "unknown")
+  console.log(name)
+  
   </script>
 </body>
 
