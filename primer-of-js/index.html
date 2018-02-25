@@ -16,15 +16,22 @@
     // consoleには'helloundefined'と表示される
     // 引数違いの同名関数は宣言できない（あとに宣言したのが有効）
 
-    // function hello(name) {
-    //   console.log('hello' + name)
-    // }
-    // hello('Tom')
-
-    const hello = (name, age) => {
-      console.log('hello' + name + ', ' + age)
+    function hello(name) {
+      console.log('hello' + name)
     }
-    hello('Tom', 16)
+    hello('Tom')
+    /*
+      アロー構文での宣言
+      だが、実行エラーになった
+        Uncaught SyntaxError: Identifier 'hello' has already been declared
+      どうやらfunction宣言の場合は後に宣言したほうが上書きされるが、
+      アロー構文のほうは同名の関数が定義されるとエラー扱いになるらしい
+      -> 関数はアロー構文で宣言しよう
+    */
+    // const hello = (name, age) => {
+    //   console.log('hello' + name + ', ' + age)
+    // }
+    // hello('Tom', 16)
 
   </script>
 </body>
