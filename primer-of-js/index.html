@@ -9,22 +9,20 @@
 <body>
   <script>
 
-    // function hello(name) {
-    //   var msg = 'hello' + name  // ローカル変数
-    //   console.log(msg)
-    // }
-    // hello('Tom')
+    // 即時関数
+    (function hello(name) {
+      console.log("hello " + name)
+    })("Tom"); // <-セミコロンがないとエラーになる
 
-    var hello = function(name) { // 無名関数、匿名関数
-      var msg = 'hello' + name  // ローカル変数
-      console.log(msg)
-    }
-    hello('Tom')
+    (() => {
+      console.log("arrow")
+    })(); // <- アロー関数の場合も
 
-    // const hello = (name, age) => {
-    //   console.log('hello' + name + ', ' + age)
-    // }
-    // hello('Tom', 16)
+    (function() {
+      var x = 10, // ローカル変数
+          y = 20
+      console.log(x + y)
+    })();
 
   </script>
 </body>
